@@ -9,6 +9,13 @@ const communicationProtocolSidebar = require("./sidebars/communication-protocol"
 const apiStyleSidebar = require("./sidebars/api-style");
 const performanceIndexSidebar = require("./sidebars/performance-index");
 const evaluationToolsSidebar = require("./sidebars/evaluation-tools");
+const gitSidebar = require("./sidebars/git");
+const svnSidebar = require("./sidebars/svn");
+const cssSidebar = require("./sidebars/css");
+const javascriptSidebar = require("./sidebars/javascript");
+const qualityInspectionSidebar = require("./sidebars/quality-inspection");
+const unitTestingSidebar = require("./sidebars/unit-testing");
+const e2eTestSidebar = require("./sidebars/e2e-test");
 
 module.exports = {
   title: "test",
@@ -77,12 +84,32 @@ module.exports = {
         text: "工程开发",
         items: [
           { text: "模块化", link: "/" },
-          { text: "版本管理", link: "/" },
-          { text: "语言增强", link: "/" },
+          {
+            text: "版本管理",
+            items: [
+              { text: "Git", link: "/git/" },
+              { text: "Svn", link: "/svn/" },
+            ],
+          },
+          { text: "依赖管理", link: "/" },
+          {
+            text: "语言增强",
+            items: [
+              { text: "CSS", link: "/css/" },
+              { text: "JavaScript", link: "/javascript/" },
+            ],
+          },
           { text: "构建工具", link: "/" },
           { text: "转换器", link: "/" },
           { text: "CI/CD", link: "/" },
-          { text: "代码质量", link: "/" },
+          {
+            text: "代码质量",
+            items: [
+              { text: "质量检测", link: "/quality-inspection/" },
+              { text: "单元测试", link: "/unit-testing/" },
+              { text: "E2E测试", link: "/e2e-test/" },
+            ],
+          },
         ],
       },
       {
@@ -167,10 +194,17 @@ module.exports = {
       "/react/": reactSidebar,
       "/bootstrap/": bootstrapSidebar,
       "/jQuery/": jQuerySidebar,
-      "/communicationProtocol/": communicationProtocolSidebar,
-      "/apiStyle/": apiStyleSidebar,
+      "/communication-protocol/": communicationProtocolSidebar,
+      "/api-style/": apiStyleSidebar,
       "/performance-index/": performanceIndexSidebar,
       "/evaluation-tools/": evaluationToolsSidebar,
+      "/git/": gitSidebar,
+      "/svn/": svnSidebar,
+      "/css/": cssSidebar,
+      "/javascript/": javascriptSidebar,
+      "/quality-inspection/": qualityInspectionSidebar,
+      "/unit-testing/": unitTestingSidebar,
+      "/e2e-test/": e2eTestSidebar,
     },
   },
 };
