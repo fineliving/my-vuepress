@@ -1,0 +1,17 @@
+{
+  "name": "my-vuepress",
+  "version": "1.0.0",
+  "description": "我的前端知识总结",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@fineliving.github.com:fineliving/my-vuepress.git"
+  },
+  "author": "liyang",
+  "license": "ISC"
+}
